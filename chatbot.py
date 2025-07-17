@@ -92,7 +92,7 @@ Return structured output like:
     def learn(self, adjustments):
         start = adjustments.find('{')
         end = adjustments.rfind('}') + 1
-        adjustments = adjustments[start:end].replace("+", "") # +5 is not valid json, so we remove it
+        adjustments = adjustments[start:end].replace("+", "") # +5 is not valid json, so we remove the +
         
         try:
             trait_dict = json.loads(adjustments)
